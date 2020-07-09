@@ -5,7 +5,7 @@ html, body {height: 100%; margin: 0;}
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #1A2933;
+  background: rgba(48,52,61, 1);;
   color: #FFF;
 }
 
@@ -22,7 +22,7 @@ p {
 
 /* Styling of window frame and titlebar */
 body {
-  border: 1px solid #48545c;
+  border: 1px solid rgba(48,52,61, 1);
   overflow-y: hidden;
 }
 
@@ -129,6 +129,10 @@ body {
 
 #close-button:hover {
   background: #E81123 !important;
+}
+
+#close-button:hover .icon {
+  filter: invert(100);
 }
 
 #close-button:active {

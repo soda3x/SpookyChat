@@ -1,0 +1,79 @@
+:root {
+    --sidebar-item-hover-background: #ffffff !important;
+    --button-primary-background: #000000 !important;
+}
+.global-font-family {
+    font-family: 'Consolas' !important;
+}
+
+.rc-input__element,
+.rc-member-list__counter,
+.rc-message-box__typing__user,
+.rc-switch__text,
+.rc-switch-double,
+.rc-table-title,
+.rc-user-info-details__info,
+.attachments__name,
+.attachments-menu,
+.color-primary-font-color,
+.message a i,
+.flex-tab a i,
+.message a[class^="icon-"],
+.flex-tab a[class^="icon-"],
+input,
+select,
+textarea {
+    color: var(--color-dark) !important;
+}
+
+.sidebar__toolbar-button-icon {
+    color: var(--color-dark) !important;
+}
+
+.sidebar {
+    background-color: #ededed !important;
+    
+}
+
+.sidebar-item {
+    color: var(--color-dark) !important;
+}
+
+.sidebar-item--active {
+     background-color: #f2f2f2 !important;
+}
+
+.rooms-list {
+    background-color: #ededed !important;
+}
+
+.collapsed {
+    display: none !important;
+}
+
+.thread-quote {
+    visibility: hidden !important;
+    display:none !important;
+    height: 0px !important;
+}
+
+.first-unread {
+    padding-top: 16px !important;
+    border: 0px !important;
+}
+
+.sidebar-item--unread {
+    color: #0861a1 !important;
+}
+
+.rc-user-info__config-value {
+    color: #000000 !important;
+}
+
+.rc-message-box__textarea {
+    color: #000000 !important;
+}
+
+.rc-message-box__container {
+    border: 0px !important;
+}
