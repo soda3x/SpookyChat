@@ -3,13 +3,13 @@ const path = require('path')
 const fs = require("fs")
 const os = require("os")
 
-var lightTheme = fs.readFileSync('./resources/app.asar/themes/theme-light.css')
-var darkTheme = fs.readFileSync('./resources/app.asar/themes/theme-dark.css')
-var titlebarThemeDark = fs.readFileSync('./resources/app.asar/themes/title-dark.css')
-var titlebarThemeLight = fs.readFileSync('./resources/app.asar/themes/title-light.css')
-var domain = fs.readFileSync('./resources/app.asar/settings.txt')
-var titlebarDark = fs.readFileSync('./resources/app.asar/themes/title-dark.html')
-var titlebarLight = fs.readFileSync('./resources/app.asar/themes/title-light.html')
+var lightTheme = fs.readFileSync('resources/app.asar/themes/theme-light.css')
+var darkTheme = fs.readFileSync('resources/app.asar/themes/theme-dark.css')
+var titlebarThemeDark = fs.readFileSync('resources/app.asar/themes/title-dark.css')
+var titlebarThemeLight = fs.readFileSync('resources/app.asar/themes/title-light.css')
+var domain = fs.readFileSync('resources/app.asar/settings.txt')
+var titlebarDark = fs.readFileSync('resources/app.asar/themes/title-dark.html')
+var titlebarLight = fs.readFileSync('resources/app.asar/themes/title-light.html')
 
 function constructWindow() {
   if (os.platform() != "win32") {
