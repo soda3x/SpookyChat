@@ -21,7 +21,8 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
     },
-    icon: __dirname + '/icons/AppIcon.icns'
+    icon: __dirname + 'appIcon.png'
+
   })
 
   mainWindow.setTitle("Spooky Chat")
