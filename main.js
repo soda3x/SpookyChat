@@ -3,13 +3,13 @@ const path = require('path')
 const fs = require("fs")
 
 
-var lightTheme = fs.readFileSync('theme-light.css')
-var darkTheme = fs.readFileSync('theme-dark.css')
-var titlebarThemeDark = fs.readFileSync('title-dark.css')
-var titlebarThemeLight = fs.readFileSync('title-light.css')
-var domain = fs.readFileSync('domain.txt')
-var titlebarDark = fs.readFileSync('title-dark.html')
-var titlebarLight = fs.readFileSync('title-light.html')
+var lightTheme = fs.readFileSync('./themes/theme-light.css')
+var darkTheme = fs.readFileSync('./themes/theme-dark.css')
+var titlebarThemeDark = fs.readFileSync('./themes/title-dark.css')
+var titlebarThemeLight = fs.readFileSync('./themes/title-light.css')
+var domain = fs.readFileSync('settings.txt')
+var titlebarDark = fs.readFileSync('./themes/title-dark.html')
+var titlebarLight = fs.readFileSync('./themes/title-light.html')
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
