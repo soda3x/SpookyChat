@@ -1,16 +1,27 @@
 {
   "name": "spookychat-lazy-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Electron client for Rocketchat",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "build_win32": "electron-packager . \"spookychat-lazy-client\" --platform=win32 icon=\"appIcon.png\" --asar --out=\"build/\"",
+    "build_linux": "electron-packager . \"spookychat-lazy-client\" --platform=\"linux\" icon=\"appIcon.png\" --asar --out=\"build/\"",
+    "build_macos": "electron-packager . \"spookychat-lazy-client\" -- platform=\"darwin\" icon=\"appIcon.png\" -- asar--out=\"build/\"",
+    "package_win32": "electron-installer-windows --src \"build/spookychat-lazy-client-win32-x64\" --dest build/release",
+    "package_linux": "electron-installer-debian --src \"build/spookychat-lazy-client-linux-x64\" --dest build/release --arch amd64",
+    "package_macos": "electron-installer-dmg \"build/spookychat-lazy-client-darwin-x64/spookychat-lazy-client.app\" spookychat-lazy-client --out=\"build/\"",
+    "clean": "rm -rf \"build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bnewman",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^9.1.0"
+    "electron": "^9.1.0",
+    "electron-installer-debian": "^3.1.0",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^15.0.0"
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.2-hotfix62",

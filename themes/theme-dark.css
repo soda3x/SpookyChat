@@ -160,7 +160,7 @@
 
 /** Font **/
 .global-font-family {
-    font-family: 'Consolas' !important;
+    font-family: "Consolas", monospace !important;
 }
 
 .rc-header__wrap {

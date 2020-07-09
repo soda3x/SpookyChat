@@ -3,7 +3,7 @@
     --button-primary-background: #000000 !important;
 }
 .global-font-family {
-    font-family: 'Consolas' !important;
+    font-family: "Consolas", monospace !important;
 }
 
 .rc-input__element,

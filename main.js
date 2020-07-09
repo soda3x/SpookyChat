@@ -1,7 +1,7 @@
 const { app, BrowserWindow, BrowserView, nativeTheme } = require('electron')
 const path = require('path')
 const fs = require("fs")
-
+const os = require("os")
 
 var lightTheme = fs.readFileSync('./resources/app.asar/themes/theme-light.css')
 var darkTheme = fs.readFileSync('./resources/app.asar/themes/theme-dark.css')
@@ -11,19 +11,36 @@ var domain = fs.readFileSync('./resources/app.asar/settings.txt')
 var titlebarDark = fs.readFileSync('./resources/app.asar/themes/title-dark.html')
 var titlebarLight = fs.readFileSync('./resources/app.asar/themes/title-light.html')
 
-function createWindow() {
-  const mainWindow = new BrowserWindow({
-    width: 1500,
-    height: 800,
-    frame: false,
-    backgroundColor: '#FFF',
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true
-    },
-    icon: __dirname + '/appIcon.png'
+function constructWindow() {
+  if (os.platform() != "win32") {
+    return new BrowserWindow({
+      width: 1500,
+      height: 800,
+      backgroundColor: '#FFF',
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        nodeIntegration: true
+      },
+      icon: __dirname + '/appIcon.png'
+    })
+  } else {
+    return new BrowserWindow({
+      width: 1500,
+      height: 800,
+      frame: false,
+      backgroundColor: '#FFF',
+      webPreferences: {
+        preload: path.join(__dirname, 'preload.js'),
+        nodeIntegration: true
+      },
+      icon: __dirname + '/appIcon.png'
+    })
+  }
+}
 
-  })
+
+function createWindow() {
+  const mainWindow = constructWindow()
 
   mainWindow.setTitle("Spooky Chat")
   // Hide menu bar
@@ -46,7 +63,12 @@ function createWindow() {
 
   mainWindow.addBrowserView(contentView)
 
-  contentView.setBounds({ x: 0, y: 30, width: 1500, height: 770 })
+  if (os.platform() == "win32") {
+    contentView.setBounds({ x: 0, y: 30, width: 1500, height: 770 })
+  } else {
+    contentView.setBounds({ x: 0, y: 0, width: 1500, height: 800 })
+  }
+  
 
   contentView.setAutoResize({
     width: true, 
@@ -54,24 +76,26 @@ function createWindow() {
   })
 
   contentView.webContents.loadURL(domain.toString())
-  if (nativeTheme.shouldUseDarkColors) {
-    mainWindow.webContents.loadURL("data:text/html," + titlebarDark.toString())
-  } else {
-    mainWindow.webContents.loadURL("data:text/html," + titlebarLight.toString())
+  if (os.platform() == "win32") {
+    if (nativeTheme.shouldUseDarkColors) {
+      mainWindow.webContents.loadURL("data:text/html," + titlebarDark.toString())
+    } else {
+      mainWindow.webContents.loadURL("data:text/html," + titlebarLight.toString())
+    }
   }
 
   mainWindow.webContents.on('did-finish-load', function () {
     mainWindow.setTitle("Spooky Chat")
-    if (nativeTheme.shouldUseDarkColors) {
-      mainWindow.webContents.insertCSS(titlebarThemeDark.toString())
-    } else {
-      mainWindow.webContents.insertCSS(titlebarThemeLight.toString())
+    if (os.platform() == "win32") {
+      if (nativeTheme.shouldUseDarkColors) {
+        mainWindow.webContents.insertCSS(titlebarThemeDark.toString())
+      } else {
+        mainWindow.webContents.insertCSS(titlebarThemeLight.toString())
+      }
     }
   })
 
   // mainWindow.webContents.openDevTools()
-
-  
 }
 
 app.whenReady().then(() => {
