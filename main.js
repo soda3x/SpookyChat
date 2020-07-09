@@ -20,8 +20,8 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
-    }
-    // icon: __dirname + '/icons/appicon.icns'
+    },
+    icon: __dirname + '/icons/AppIcon.icns'
   })
 
   mainWindow.setTitle("Spooky Chat")
