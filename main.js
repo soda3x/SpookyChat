@@ -21,7 +21,7 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
     },
-    icon: __dirname + 'appIcon.png'
+    icon: __dirname + '/appIcon.png'
 
   })
 
