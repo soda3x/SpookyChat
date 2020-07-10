@@ -184,6 +184,10 @@
     border-color: var(--color-dark-medium) !important;
 }
 
+.rc-message-box__container.editing {
+    background-color: var(--color-dark) !important;
+}
+
 .rc-message-box__typing-user {
     color: var(--color-gray-light) !important;
 }
@@ -288,7 +292,7 @@ textarea {
 }
 
 .message.editing {
-    background: var(--message-box-editing-color) !important;
+    background-color: var(--color-dark) !important;
 }
 
 .messages-box.selectable .selected {
