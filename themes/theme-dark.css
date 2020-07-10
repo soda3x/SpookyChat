@@ -41,6 +41,11 @@
     font-style: italic !important;
 }
 
+.rc-old.main-content {
+    overflow: hidden;
+    border-radius: 5px 0 0 0;
+}
+
 .emoji-picker {
     background-color: var(--color-dark) !important;
 }

@@ -26,6 +26,11 @@ textarea {
     color: var(--color-dark) !important;
 }
 
+.rc-old.main-content {
+    overflow: hidden;
+    border-radius: 5px 0 0 0;
+}
+
 .sidebar__toolbar-button-icon {
     color: var(--color-dark) !important;
 }
