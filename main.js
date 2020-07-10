@@ -1,4 +1,4 @@
-const { app, BrowserWindow, BrowserView, nativeTheme } = require('electron')
+const { app, BrowserWindow, BrowserView, nativeTheme, screen } = require('electron')
 const path = require('path')
 const fs = require("fs")
 const os = require("os")
@@ -42,6 +42,8 @@ function constructWindow() {
 function createWindow() {
   const mainWindow = constructWindow()
 
+  const titleBarHeight = 30
+
   mainWindow.setTitle("Spooky Chat")
   // Hide menu bar
   mainWindow.removeMenu()
@@ -64,7 +66,7 @@ function createWindow() {
   mainWindow.addBrowserView(contentView)
 
   if (os.platform() == "win32") {
-    contentView.setBounds({ x: 0, y: 30, width: 1500, height: 770 })
+    contentView.setBounds({ x: 0, y: titleBarHeight, width: 1500, height: 800-titleBarHeight })
   } else {
     contentView.setBounds({ x: 0, y: 0, width: 1500, height: 800 })
   }
@@ -94,6 +96,20 @@ function createWindow() {
       }
     }
   })
+
+  // The following event handlers prevent the contentView from resizing incorrectly and
+  // cutting off content at the bottom of the view.
+
+  mainWindow.on('maximize', () => {
+    const { width, height } = screen.getPrimaryDisplay().workAreaSize
+    contentView.setBounds({x:0,y:titleBarHeight, width:width, height:height-titleBarHeight})
+  });
+
+  mainWindow.on('unmaximize', () => {
+    const width = mainWindow.getSize()[0]
+    const height = mainWindow.getSize()[1]
+    contentView.setBounds({x:0,y:titleBarHeight, width:width, height:height-titleBarHeight})
+  });
 
   // mainWindow.webContents.openDevTools()
 }
