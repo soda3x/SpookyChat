@@ -1,8 +1,10 @@
 # Spooky Chat
 
-## An electron client for Rocket Chat
+![It's Spooky](https://github.com/soda3x/SpookyChat/raw/master/misc/spookychat_banner.png "It's Spooky")
 
-![It's Spooky](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "It's Spooky")
+An electron client for Rocket Chat
+
+
 
 ## Features
 
