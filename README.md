@@ -24,6 +24,14 @@ An electron client for Rocket Chat
 
 ## Development
 
+Before running, set Rocket Chat server domain in `./settings.txt`
+
+Example `settings.txt`
+
+```text
+https://rocketchat.mydomain.com
+```
+
 To run, use `npm start`
 
 Use `npm run clean` to clean build directory (this only works on Unix based OSes)
