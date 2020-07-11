@@ -2,7 +2,7 @@
 
 An electron client for Rocket Chat
 
-
+![SpoooooooooOOOOoooOOOooooooOOOOooky!](https://github.com/soda3x/SpookyChat/raw/master/misc/showcase.png "SpoooooooooOOOOoooOOOooooooOOOOooky!")
 
 ## Features
 
