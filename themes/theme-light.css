@@ -1,7 +1,47 @@
 :root {
     --sidebar-item-hover-background: #ffffff !important;
     --button-primary-background: #000000 !important;
+    --sc-accent: #7289da;
+    --link-color: var(--sc-accent) !important;
+    --link-color-hover: #7289dab8 !important;
+    --rc-color-button-primary: var(--sc-accent) !important;
+    --mention-link-background: var(--link-color) !important;
 }
+
+#rocket-chat {
+    background-color: #f2f2f2 !important;
+}
+
+.message a {
+    color: var(--link-color) !important;
+}
+
+.message a:hover {
+    color: var(--link-color-hover) !important;
+}
+
+.attachment .attachment-title {
+    color: var(--sc-accent) !important;
+}
+
+.first-unread .body:before {
+    background: var(--sc-accent) !important;
+}
+
+.first-unread .body:after {
+    color: var(--sc-accent) !important;
+    background: var(--color-dark) !important;
+}
+
+.rc-message-box__container {
+    border-color: var(--color-dark-medium) !important;
+    background-color: #f2f2f2 !important;
+}
+
+.rc-message-box__container.editing {
+    background-color: #fafafa !important;
+}
+
 .global-font-family {
     font-family: "Consolas", monospace !important;
 }
@@ -37,7 +77,6 @@ textarea {
 
 .sidebar {
     background-color: #ededed !important;
-    
 }
 
 .sidebar-item {
@@ -45,7 +84,7 @@ textarea {
 }
 
 .sidebar-item--active {
-     background-color: #f2f2f2 !important;
+    background-color: #f2f2f2 !important;
 }
 
 .rooms-list {
@@ -58,7 +97,7 @@ textarea {
 
 .thread-quote {
     visibility: hidden !important;
-    display:none !important;
+    display: none !important;
     height: 0px !important;
 }
 
