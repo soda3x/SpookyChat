@@ -7,6 +7,8 @@ var lightTheme = fs.readFileSync('resources/app.asar/themes/theme-light.css')
 var darkTheme = fs.readFileSync('resources/app.asar/themes/theme-dark.css')
 var titlebarThemeDark = fs.readFileSync('resources/app.asar/themes/title-dark.css')
 var titlebarThemeLight = fs.readFileSync('resources/app.asar/themes/title-light.css')
+var darkSyntax = fs.readFileSync('resources/app.asar/themes/syntax-dark.css')
+var lightSyntax = fs.readFileSync('resources/app.asar/themes/syntax-light.css')
 var domain = fs.readFileSync('resources/app.asar/settings.txt')
 var titlebarDark = fs.readFileSync('resources/app.asar/themes/title-dark.html')
 var titlebarLight = fs.readFileSync('resources/app.asar/themes/title-light.html')
@@ -55,11 +57,12 @@ function createWindow() {
     })
 
     contentView.webContents.on('did-finish-load', function() {
-        contentView.webContents.setZoomFactor(1.2)
         if (nativeTheme.shouldUseDarkColors) {
             contentView.webContents.insertCSS(darkTheme.toString())
+            contentView.webContents.insertCSS(darkSyntax.toString())
         } else {
             contentView.webContents.insertCSS(lightTheme.toString())
+            contentView.webContents.insertCSS(lightSyntax.toString())
         }
     })
 
