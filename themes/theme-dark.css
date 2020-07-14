@@ -171,8 +171,9 @@
 }
 
 .mention-link--user {
-    background-color: var(--color-dark-medium) !important;
+    background-color: var(--color-darkest) !important;
     color: var(--color-white) !important;
+    padding: 0px !important;
 }
 
 .collapsed {
