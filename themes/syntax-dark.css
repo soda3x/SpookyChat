@@ -1,0 +1,79 @@
+/** Syntax highlighting for Rocket Chat **/
+
+.hljs {
+    display: block !important;
+    overflow-x: auto !important;
+    padding: .5em !important;
+    background: #2f343d !important;
+}
+
+.hljs,
+.hljs-subst,
+.hljs-tag {
+    color: #f0e9eb !important;
+}
+
+.hljs-emphasis,
+.hljs-strong {
+    color: #333029 !important;
+}
+
+.hljs-bullet,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-quote,
+.hljs-regexp {
+    color: #a780ee !important;
+}
+
+.hljs-code,
+.hljs-section,
+.hljs-selector-class,
+.hljs-title {
+    color: #0fc0db !important;
+}
+
+.hljs-strong {
+    font-weight: bold !important;
+}
+
+.hljs-emphasis {
+    font-style: italic !important;
+}
+
+.hljs-attr,
+.hljs-keyword,
+.hljs-name,
+.hljs-selector-tag {
+    color: #ec407f !important;
+}
+
+.hljs-attribute,
+.hljs-symbol {
+    color: #39a4b9 !important;
+}
+
+.hljs-class .hljs-title,
+.hljs-params {
+    color: #b86ac8 !important;
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-string,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+    color: #d9df19 !important;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+    color: #809091 !important;
+}
