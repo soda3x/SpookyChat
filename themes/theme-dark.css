@@ -34,8 +34,21 @@
     --rc-color-button-primary: var(--sc-accent) !important;
 }
 
+.background-info-font-color {
+    background-color: var(--sc-accent) !important;
+}
+
+.attachment .attachment-block {
+    margin: 0px !important;
+}
+
+.popup-item.selected {
+    background-color: var(--sc-accent) !important;
+}
+
 .attachment .attachment-title {
     color: var(--sc-accent) !important;
+    font-size: 10pt !important;
 }
 
 .first-unread .body:before {
