@@ -3,13 +3,15 @@ const path = require('path')
 const fs = require("fs")
 const os = require("os")
 
+// Load in settings.txt and tokenize by new line
+var settings = fs.readFileSync('resources/settings.txt').toString().split("\n")
+
 var lightTheme = fs.readFileSync('resources/app.asar/themes/theme-light.css')
 var darkTheme = fs.readFileSync('resources/app.asar/themes/theme-dark.css')
 var titlebarThemeDark = fs.readFileSync('resources/app.asar/themes/title-dark.css')
 var titlebarThemeLight = fs.readFileSync('resources/app.asar/themes/title-light.css')
 var darkSyntax = fs.readFileSync('resources/app.asar/themes/syntax-dark.css')
 var lightSyntax = fs.readFileSync('resources/app.asar/themes/syntax-light.css')
-var domain = fs.readFileSync('resources/app.asar/settings.txt')
 var titlebarDark = fs.readFileSync('resources/app.asar/themes/title-dark.html')
 var titlebarLight = fs.readFileSync('resources/app.asar/themes/title-light.html')
 
@@ -57,7 +59,7 @@ function createWindow() {
     })
 
     contentView.webContents.on('did-finish-load', function() {
-        if (nativeTheme.shouldUseDarkColors) {
+        if (nativeTheme.shouldUseDarkColors || settings[1] == "force-dark-theme") {
             contentView.webContents.insertCSS(darkTheme.toString())
             contentView.webContents.insertCSS(darkSyntax.toString())
         } else {
@@ -80,9 +82,9 @@ function createWindow() {
         height: true
     })
 
-    contentView.webContents.loadURL(domain.toString())
+    contentView.webContents.loadURL(settings[0])
     if (os.platform() == "win32") {
-        if (nativeTheme.shouldUseDarkColors) {
+        if (nativeTheme.shouldUseDarkColors || settings[1] == "force-dark-theme") {
             mainWindow.webContents.loadURL("data:text/html," + titlebarDark.toString())
         } else {
             mainWindow.webContents.loadURL("data:text/html," + titlebarLight.toString())
@@ -92,7 +94,7 @@ function createWindow() {
     mainWindow.webContents.on('did-finish-load', function() {
         mainWindow.setTitle("Spooky Chat")
         if (os.platform() == "win32") {
-            if (nativeTheme.shouldUseDarkColors) {
+            if (nativeTheme.shouldUseDarkColors || settings[1] == "force-dark-theme") {
                 mainWindow.webContents.insertCSS(titlebarThemeDark.toString())
             } else {
                 mainWindow.webContents.insertCSS(titlebarThemeLight.toString())
