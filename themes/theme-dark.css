@@ -34,6 +34,10 @@
     --rc-color-button-primary: var(--sc-accent) !important;
 }
 
+.message .reactions>li.selected {
+    color: var(--sc-accent) !important;
+}
+
 .background-info-font-color {
     background-color: var(--sc-accent) !important;
 }
@@ -302,14 +306,14 @@ textarea {
 .message.new-day::before,
 .flex-tab .message.new-day::before {
     background-color: var(--color-darkest) !important;
-    color: var(--color-gray-medium) !important;
+    color: var(--sc-accent) !important;
 }
 
 .rc-user-info__row--separator,
 .rc-old .page-settings .section,
 .border-component-color,
 .message.new-day::after {
-    border-color: var(--color-dark-medium) !important;
+    border-color: var(--sc-accent) !important;
 }
 
 .message a {
