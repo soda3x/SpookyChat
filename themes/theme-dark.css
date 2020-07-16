@@ -25,13 +25,27 @@
     --popup-list-name-color: var(--color-gray-medium);
     --rc-color-alert-message-primary-background: #1d74f515;
     --rc-color-alert-message-secondary-background: #7ca52b15;
-    --sidebar-background-light: var(--color-dark);
-    --sidebar-background-light-hover: var(--color-darkest);
     --tags-background: var(--color-dark);
     --tags-border-color: var(--color-dark-medium);
     --tags-text-color: var(--color-gray-medium);
     --rc-color-error: #757586;
     --rc-color-button-primary: var(--sc-accent) !important;
+}
+
+.rc-input__element{
+    border-color: var(--color-dark-medium) !important;
+}
+
+input[disabled], select[disabled], textarea[disabled] {
+    background-color: var(--color-dark) !important;
+}
+
+.sidebar, .sidebar-light {
+    background-color: var(--color-dark) !important;
+}
+
+.sidebar-item:hover{
+    background-color: var(--color-dark-medium) !important;
 }
 
 .message .reactions>li.selected {
