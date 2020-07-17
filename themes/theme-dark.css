@@ -32,6 +32,10 @@
     --rc-color-button-primary: var(--sc-accent) !important;
 }
 
+.rc-input__title{
+    color: var(--color-gray-medium) !important;
+}
+
 .rc-input__element{
     border-color: var(--color-dark-medium) !important;
 }
