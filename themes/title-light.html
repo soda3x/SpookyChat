@@ -38,7 +38,15 @@
     </div>
   </header>
   <script>
+    try {
     require('./resources/app.asar/renderer.js')
+    } catch (e) {
+      try {
+        require('./renderer.js')
+      } catch (e) {
+        console.log("Could not find a renderer.js")
+      }
+    }
   </script>
 </body>
 
