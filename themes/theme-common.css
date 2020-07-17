@@ -83,8 +83,7 @@ textarea[disabled],
 .rc-old .messages-container .footer,
 .rc-user-info-container,
 .content-background-color,
-.contextual-bar__header,
-#rocket-chat {
+.contextual-bar__header {
     background-color: var(--sc-background-primary) !important;
 }
 
@@ -97,7 +96,8 @@ textarea[disabled],
 .attachments__item:hover,
 .secondary-background-color,
 .emoji-picker .emojis .emoji-list li:hover,
-.first-unread .body:after {
+.first-unread .body:after,
+#rocket-chat {
     background-color: var(--sc-background-secondary) !important;
 }
 
