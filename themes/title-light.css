@@ -5,7 +5,7 @@ html, body {height: 100%; margin: 0;}
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #ededed;
+  background: #eaeaea;
   color: #FFF;
 }
 
@@ -17,12 +17,12 @@ h1 {
 
 p {
   margin-top: 10px;
-  color: #ededed;
+  color: #eaeaea;
 }
 
 /* Styling of window frame and titlebar */
 body {
-  border: 1px solid #ededed;
+  border: 1px solid #eaeaea;
   overflow-y: hidden;
 }
 

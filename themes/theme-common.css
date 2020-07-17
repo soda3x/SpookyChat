@@ -4,6 +4,7 @@
     --link-color: var(--sc-accent);
     --link-color-hover: var(--sc-accent-hover);
     --rc-color-button-primary: var(--sc-accent) !important;
+    --sidebar-item-active-background: var(--sc-background-highlight) !important;
     --rc-color-error: var(--sc-text-highlight);
     --tags-background: var(--sc-background-secondary);
     --tags-border-color: var(--sc-background-highlight);
@@ -170,7 +171,8 @@ textarea {
 .message a i:hover,
 .flex-tab a i:hover,
 .message a[class^="icon-"]:hover,
-.flex-tab a[class^="icon-"]:hover {
+.flex-tab a[class^="icon-"]:hover,
+.sidebar-item {
     color: var(--sc-text-secondary) !important;
 }
 
