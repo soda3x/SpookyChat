@@ -1,0 +1,204 @@
+:root {
+    /* Rocket Chat Default Overrides */
+    /* Are all of these actually necessary? */
+    --link-color: var(--sc-accent);
+    --link-color-hover: var(--sc-accent-hover);
+    --rc-color-button-primary: var(--sc-accent) !important;
+    --sidebar-item-active-background: var(--sc-background-highlight) !important;
+    --rc-color-error: var(--sc-text-highlight);
+    --tags-background: var(--sc-background-secondary);
+    --tags-border-color: var(--sc-background-highlight);
+    --tags-text-color: var(--sc-text-primary);
+    --popup-list-name-color: var(--sc-text-primary);
+    --popover-item-color: var(--sc-text-primary);
+    --input-icon-color: var(--sc-text-primary);
+    --create-channel-title-color: var(--sc-text-primary);
+    --button-disabled-background: var(--sc-background-secondary);
+    --button-disabled-text-color: var(--sc-text-secondary);
+    --button-secondary-background: var(--sc-background-highlight);
+    --header-background-color: var(--sc-background-primary);
+    --header-title-username-color-darker: var(--sc-text-highlight);
+    --input-border-color: var(--sc-background-highlight);
+    --popover-divider-color: var(--sc-background-highlight);
+    --popup-list-background: var(--sc-background-secondary);
+    --popup-list-selected-background: var(--sc-background-secondary);
+    --popup-list-background-hover: var(--sc-background-primary);
+    --popover-background: var(--sc-background-primary);
+    --popover-title-color: var(--sc-text-highlight);
+    --mention-link-background: var(--sc-accent);
+}
+
+/* Font Family */
+
+.global-font-family {
+    font-family: "Consolas", monospace !important;
+}
+
+.rc-old blockquote {
+    font-style: italic !important;
+}
+
+.attachment .attachment-title {
+    font-size: 10pt !important;
+}
+
+/* Background Colours */
+
+.sidebar,
+.sidebar-light,
+input[disabled],
+select[disabled],
+textarea[disabled],
+.rc-message-box__container,
+.message .reactions>li,
+.message .reactions>li.selected,
+.message.editing,
+.emoji-picker {
+    background-color: var(--sc-background-secondary) !important;
+}
+
+.channel-settings,
+.push-notifications,
+.mentions,
+.starred-messages,
+.pinned-messages,
+.snippeted-messages,
+.keyboard-shortcut-list,
+.members-list,
+.rocket-search-tab,
+.thread-list,
+.discussions,
+.uploaded-files-list,
+.video,
+.badge--unread,
+.unread-burger-alert,
+.mention-link--user,
+.rc-header__wrap,
+.message.new-day::before,
+.flex-tab .message.new-day::before,
+.role-tag,
+.rc-old .code-colors,
+.rc-modal,
+.rc-modal__footer,
+.rc-old .messages-container-wrapper,
+.rc-old .messages-container .footer,
+.rc-user-info-container,
+.content-background-color,
+.contextual-bar__header {
+    background-color: var(--sc-background-primary) !important;
+}
+
+.rc-old .rc-message-box .reply-preview,
+.rc-member-list__user.active,
+.rc-member-list__user:hover,
+.rc-user-info-details,
+.rc-table tbody tr:not(.table-no-click):not(.table-no-pointer):hover,
+.attachments__item.active,
+.attachments__item:hover,
+.secondary-background-color,
+.emoji-picker .emojis .emoji-list li:hover,
+.first-unread .body:after,
+#rocket-chat {
+    background-color: var(--sc-background-secondary) !important;
+}
+
+.sidebar-item:hover,
+.rc-button,
+.rc-message-box__container.editing {
+    background-color: var(--sc-background-highlight) !important;
+}
+
+.background-info-font-color,
+.popup-item.selected,
+.first-unread .body:before {
+    background-color: var(--sc-accent) !important;
+}
+
+.background-transparent-darker-before::before {
+    background-color: var(--sc-text-primary) !important;
+}
+
+
+/* Text Colours */
+
+.message .reactions>li.selected,
+.attachment .attachment-title,
+.first-unread .body:after,
+.message.new-day::before,
+.flex-tab .message.new-day::before,
+.role-tag {
+    color: var(--sc-accent) !important;
+}
+
+.rc-input__title,
+.attachments__name,
+.rc-modal__content-text,
+.rc-modal__close,
+.rc-old .code-colors,
+.rc-header__name,
+.rc-button:not(.rc-button--primary) .rc-input__element,
+.rc-member-list__counter,
+.rc-message-box__typing__user,
+.rc-switch__text,
+.rc-switch-double,
+.rc-table-title,
+.rc-user-info-details__info,
+.rc-modal__title,
+.attachments__name,
+.attachments-menu,
+.color-primary-font-color,
+.sidebar-light .sidebar-item,
+.message a i,
+.flex-tab a i,
+.message a[class^="icon-"],
+.flex-tab a[class^="icon-"],
+input,
+select,
+textarea {
+    color: var(--sc-text-primary) !important;
+}
+
+.message a {
+    color: var(--sc-accent) !important;
+}
+
+.message a:hover {
+    color: var(--sc-accent-hover) !important;
+}
+
+.rc-form-label,
+.message-actions,
+.message a i:hover,
+.flex-tab a i:hover,
+.message a[class^="icon-"]:hover,
+.flex-tab a[class^="icon-"]:hover,
+.sidebar-item {
+    color: var(--sc-text-secondary) !important;
+}
+
+.mention-link--user,
+.rc-message-box__typing-user,
+.rc-form-legend {
+    color: var(--sc-text-highlight) !important;
+}
+
+/* Borders */
+
+.rc-input__element,
+.rc-message-box__container,
+.rc-button:not(.rc-button--primary),
+.message .reactions>li,
+.message .reactions>li.selected {
+    border-color: var(--sc-background-highlight) !important;
+}
+
+.rc-old .code-colors {
+    border-color: var(--sc-background-secondary) !important;
+}
+
+.rc-user-info__row--separator,
+.rc-old .page-settings .section,
+.border-component-color,
+.message.new-day::after {
+    border-color: var(--sc-accent) !important;
+}

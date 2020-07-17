@@ -1,0 +1,66 @@
+/* General Layout */
+
+.role-tag {
+    border-width: 0px !important;
+    padding: 0px !important;
+    padding-right: 5px !important;
+    margin: 0px !important;
+}
+
+.contextual-bar__header {
+    box-shadow: 0 3px 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.rc-popover__content {
+    box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.rc-select__arrow {
+    margin: 0 5px !important;
+}
+
+.rc-user-info__name {
+    margin-bottom: 5px !important;
+}
+
+.rc-user-info__username {
+    margin-bottom: 20px !important;
+}
+
+.collapsed {
+    display: none !important;
+}
+
+.thread-replied {
+    visibility: hidden !important;
+    display: none !important;
+    height: 0px !important;
+}
+
+.thread-quote {
+    visibility: hidden !important;
+    display: none !important;
+    height: 0px !important;
+}
+
+.first-unread {
+    padding-top: 16px !important;
+    border: 0px !important;
+}
+
+.rc-message-box__container {
+    border: 0px !important;
+}
+
+.rc-old.main-content {
+    overflow: hidden;
+    border-radius: 5px 0 0 0;
+}
+
+.attachment .attachment-block {
+    margin: 0px !important;
+}
+
+.mention-link--user {
+    padding: 0px !important;
+}
