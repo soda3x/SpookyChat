@@ -5,6 +5,8 @@ const os = require("os")
 
 // Configuration files:
 var settings;
+var commonTheme;
+var commonLayout;
 var lightTheme;
 var darkTheme;
 var titlebarThemeDark;
@@ -43,6 +45,8 @@ function constructWindow() {
 
 function loadProdConfigurationFiles() {
     settings = fs.readFileSync('resources/settings.txt').toString().split("\n")
+    commonTheme = fs.readFileSync('resources/app.asar/themes/theme-common.css')
+    commonLayout = fs.readFileSync('resources/app.asar/themes/theme-common-layout.css')
     lightTheme = fs.readFileSync('resources/app.asar/themes/theme-light.css')
     darkTheme = fs.readFileSync('resources/app.asar/themes/theme-dark.css')
     titlebarThemeDark = fs.readFileSync('resources/app.asar/themes/title-dark.css')
@@ -55,6 +59,8 @@ function loadProdConfigurationFiles() {
 
 function loadDevConfigurationFiles() {
     settings = fs.readFileSync('settings.txt').toString().split("\n")
+    commonTheme = fs.readFileSync('themes/theme-common.css')
+    commonLayout = fs.readFileSync('themes/theme-common-layout.css')
     lightTheme = fs.readFileSync('themes/theme-light.css')
     darkTheme = fs.readFileSync('themes/theme-dark.css')
     titlebarThemeDark = fs.readFileSync('themes/title-dark.css')
@@ -103,6 +109,8 @@ function createWindow() {
             contentView.webContents.insertCSS(lightTheme.toString())
             contentView.webContents.insertCSS(lightSyntax.toString())
         }
+        contentView.webContents.insertCSS(commonTheme.toString())
+        contentView.webContents.insertCSS(commonLayout.toString())
     })
 
     mainWindow.addBrowserView(contentView)
