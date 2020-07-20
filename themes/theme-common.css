@@ -147,7 +147,7 @@ textarea[disabled],
 .attachments__name,
 .attachments-menu,
 .color-primary-font-color,
-.sidebar-light .sidebar-item,
+.sidebar-light,
 .message a i,
 .flex-tab a i,
 .message a[class^="icon-"],
@@ -171,14 +171,14 @@ textarea {
 .message a i:hover,
 .flex-tab a i:hover,
 .message a[class^="icon-"]:hover,
-.flex-tab a[class^="icon-"]:hover,
-.sidebar-item {
+.flex-tab a[class^="icon-"]:hover {
     color: var(--sc-text-secondary) !important;
 }
 
 .mention-link--user,
 .rc-message-box__typing-user,
-.rc-form-legend {
+.rc-form-legend,
+.sidebar-item--unread {
     color: var(--sc-text-highlight) !important;
 }
 
