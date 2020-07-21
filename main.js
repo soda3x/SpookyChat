@@ -1,4 +1,4 @@
-const { app, BrowserWindow, BrowserView, nativeTheme, screen } = require('electron')
+const { app, BrowserWindow, BrowserView, nativeTheme, screen, shell } = require('electron')
 const path = require('path')
 const fs = require("fs")
 const os = require("os")
@@ -111,6 +111,15 @@ function createWindow() {
         }
         contentView.webContents.insertCSS(commonTheme.toString())
         contentView.webContents.insertCSS(commonLayout.toString())
+    })
+
+    contentView.webContents.on('new-window', (event, url, frameName, disposition, options) => {
+        // Open URL in default browser when user clicks on a hyperlink
+        event.preventDefault()
+        // Don't open url for attatchments, will fail.
+        if (!url.includes("rocketchat.daronmont.com.au/file-upload/")) {
+            shell.openExternal(url)
+        }
     })
 
     mainWindow.addBrowserView(contentView)
