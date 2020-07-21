@@ -28,6 +28,9 @@
     --mention-link-background: var(--sc-accent);
 }
 
+::selection {
+    background: var(--sc-accent);
+}
 
 /* Font Family */
 
