@@ -87,6 +87,11 @@ function createWindow() {
         }
     }
 
+    // Remove line endings from settings
+    for (var i = 0; i < settings.length; i++) {
+        settings[i] = settings[i].trim()
+    }
+
     const mainWindow = constructWindow()
 
     const titleBarHeight = 33
@@ -117,7 +122,7 @@ function createWindow() {
         // Open URL in default browser when user clicks on a hyperlink
         event.preventDefault()
         // Don't open url for attatchments, will fail.
-        if (!url.includes("rocketchat.daronmont.com.au/file-upload/")) {
+        if (!url.includes(settings[0] + "/file-upload/")) {
             shell.openExternal(url)
         }
     })
