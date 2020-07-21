@@ -23,7 +23,7 @@
     --popup-list-background-hover: var(--sc-background-primary);
     --popover-item-color: var(--sc-background-primary) !important;
     --popover-divider-color: var(--sc-background-highlight) !important;
-    --popover-background: var(--sc-text-primary) !important;
+    --popover-background: var(--sc-text-highlight) !important;
     --popover-title-color: var(--sc-background-primary) !important;
     --mention-link-background: var(--sc-accent);
 }
