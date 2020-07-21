@@ -9,8 +9,7 @@ var commonTheme;
 var commonLayout;
 var lightTheme;
 var darkTheme;
-var titlebarThemeDark;
-var titlebarThemeLight;
+var titleBarCommon;
 var darkSyntax;
 var lightSyntax;
 var titlebarDark;
@@ -49,10 +48,9 @@ function loadProdConfigurationFiles() {
     commonLayout = fs.readFileSync('resources/app.asar/themes/theme-common-layout.css')
     lightTheme = fs.readFileSync('resources/app.asar/themes/theme-light.css')
     darkTheme = fs.readFileSync('resources/app.asar/themes/theme-dark.css')
-    titlebarThemeDark = fs.readFileSync('resources/app.asar/themes/title-dark.css')
-    titlebarThemeLight = fs.readFileSync('resources/app.asar/themes/title-light.css')
     darkSyntax = fs.readFileSync('resources/app.asar/themes/syntax-dark.css')
     lightSyntax = fs.readFileSync('resources/app.asar/themes/syntax-light.css')
+    titleBarCommon = fs.readFileSync('resources/app.asar/themes/titlebar-common.css')
     titlebarDark = fs.readFileSync('resources/app.asar/themes/title-dark.html')
     titlebarLight = fs.readFileSync('resources/app.asar/themes/title-light.html')
 }
@@ -63,10 +61,9 @@ function loadDevConfigurationFiles() {
     commonLayout = fs.readFileSync('themes/theme-common-layout.css')
     lightTheme = fs.readFileSync('themes/theme-light.css')
     darkTheme = fs.readFileSync('themes/theme-dark.css')
-    titlebarThemeDark = fs.readFileSync('themes/title-dark.css')
-    titlebarThemeLight = fs.readFileSync('themes/title-light.css')
     darkSyntax = fs.readFileSync('themes/syntax-dark.css')
     lightSyntax = fs.readFileSync('themes/syntax-light.css')
+    titleBarCommon = fs.readFileSync('themes/titlebar-common.css')
     titlebarDark = fs.readFileSync('themes/title-dark.html')
     titlebarLight = fs.readFileSync('themes/title-light.html')
 }
@@ -153,10 +150,11 @@ function createWindow() {
     mainWindow.webContents.on('did-finish-load', function () {
         mainWindow.setTitle("Spooky Chat")
         if (os.platform() == "win32") {
+            mainWindow.webContents.insertCSS(titleBarCommon.toString())
             if (nativeTheme.shouldUseDarkColors || settings[1] == "force-dark-theme") {
-                mainWindow.webContents.insertCSS(titlebarThemeDark.toString())
+                mainWindow.webContents.insertCSS(darkTheme.toString())
             } else {
-                mainWindow.webContents.insertCSS(titlebarThemeLight.toString())
+                mainWindow.webContents.insertCSS(lightTheme.toString())
             }
         }
     })
