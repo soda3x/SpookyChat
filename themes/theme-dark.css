@@ -1,10 +1,12 @@
 :root {
-    --sc-background-primary: var(--color-darkest);
-    --sc-background-secondary: var(--color-dark);
-    --sc-background-highlight: var(--color-dark-medium);
-    --sc-text-primary: var(--color-gray-medium);
-    --sc-text-secondary: var(--color-dark-light);
-    --sc-text-highlight: var(--color-gray-light);
-    --sc-accent: #7289da;
-    --sc-accent-hover: #7289dab8;
+    --sc-background-primary: #2E3440;
+    --sc-background-secondary: #3B4252;
+    --sc-background-highlight: #434C5E;
+    --sc-text-primary: #D8DEE9;
+    --sc-text-secondary: #E5E9F0;
+    --sc-text-highlight: #ECEFF4;
+    --sc-accent: #88C0D0;
+    --sc-accent-hover: #81A1C1;
+    --sc-error: #BF616A;
+    --sc-error-hover: #BF616AB8;
 }
