@@ -32,6 +32,13 @@
     --status-invisible-sidebar: var(--sc-background-primary) !important;
     --sidebar-item-unread-color: var(--sc-accent) !important;
     --sidebar-item-text-color: var(--sc-text-primary) !important;
+    --rcx-text-colors-info: var(--sc-text-primary) !important;
+    --rcx-text-colors-default: var(--sc-text-primary) !important;
+    --rcx-input-colors-background-color: var(--sc-background-secondary) !important;
+    --rcx-tabs-selected-color: var(--sc-accent) !important;
+    --rcx-tabs-selected-border-color: var(--sc-accent) !important;
+    --rcx-input-colors-border-color: var(--sc-background-highlight) !important;
+    --rcx-tabs-color: var(--sc-background-highlight) !important;
 }
 
 ::selection {
@@ -116,7 +123,8 @@ textarea[disabled],
 
 .sidebar-item:hover,
 .rc-button,
-.rc-message-box__container.editing {
+.rc-message-box__container.editing,
+.rcx-table__row:hover {
     background-color: var(--sc-background-highlight) !important;
 }
 
@@ -230,4 +238,8 @@ textarea {
 .rcx-radio-button__input:checked+.rcx-radio-button__fake,
 .rcx-radio-button__input+.rcx-radio-button__fake {
     border-color: var(--sc-accent) !important;
+}
+
+.rcx-table__head:after {
+    border-bottom: .125 rem solid var(--sc-accent) !important;
 }
