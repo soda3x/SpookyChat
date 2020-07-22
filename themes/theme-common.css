@@ -30,6 +30,8 @@
     --status-away: var(--sc-alert) !important;
     --status-busy: var(--sc-error) !important;
     --status-invisible-sidebar: var(--sc-background-primary) !important;
+    --sidebar-item-unread-color: var(--sc-accent) !important;
+    --sidebar-item-text-color: var(--sc-text-primary) !important;
 }
 
 ::selection {
@@ -162,7 +164,6 @@ textarea[disabled],
 .rc-user-info-details__info,
 .rc-modal__title,
 .rc-message-box__toolbar-formatting-icon,
-.sidebar-item__ellipsis,
 .rooms-list__type,
 .attachments__name,
 .attachments-menu,
@@ -197,8 +198,7 @@ textarea {
 
 .mention-link--user,
 .rc-message-box__typing-user,
-.rc-form-legend,
-.sidebar-item--unread {
+.rc-form-legend {
     color: var(--sc-text-highlight) !important;
 }
 
