@@ -26,6 +26,10 @@
     --popover-background: var(--sc-text-highlight) !important;
     --popover-title-color: var(--sc-background-primary) !important;
     --mention-link-background: var(--sc-accent);
+    --status-online: var(--sc-online) !important;
+    --status-away: var(--sc-alert) !important;
+    --status-busy: var(--sc-error) !important;
+    --status-invisible-sidebar: var(--sc-background-primary) !important;
 }
 
 ::selection {
@@ -136,7 +140,10 @@ textarea[disabled],
 .message.new-day::before,
 .flex-tab .message.new-day::before,
 .rc-message-box__toolbar-formatting-icon:hover,
-.role-tag {
+.role-tag,
+.rc-header__icon--star:hover,
+.rc-header__toggle-favorite:hover,
+.rc-header__toggle-favorite--checked {
     color: var(--sc-accent) !important;
 }
 
