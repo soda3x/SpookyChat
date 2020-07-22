@@ -132,7 +132,8 @@ textarea[disabled],
 .popup-item.selected,
 .first-unread .body:before,
 .rcx-toggle-switch__input:checked+.rcx-toggle-switch__fake,
-.rcx-radio-button__input:checked+.rcx-radio-button__fake {
+.rcx-radio-button__input:checked+.rcx-radio-button__fake,
+.actionLinks li .action-link {
     background-color: var(--sc-accent) !important;
 }
 
@@ -211,7 +212,8 @@ textarea {
 }
 
 .rc-popover__list,
-.rcx-box--text-style-micro {
+.rcx-box--text-style-micro,
+.actionLinks li .action-link {
     color: var(--sc-background-primary) !important;
 }
 
