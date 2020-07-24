@@ -245,3 +245,7 @@ textarea {
 .rcx-table__head:after {
     border-bottom: .125 rem solid var(--sc-accent) !important;
 }
+
+.rc-message-box__toolbar-formatting-link {
+    display: none; /* Hide KaTeX link */
+}
