@@ -176,6 +176,11 @@ function createWindow() {
     // mainWindow.webContents.openDevTools()
 }
 
+// From https://www.electronjs.org/docs/tutorial/notifications
+// The following line makes notifications work, so long as there is a start menu entry for the application process.
+// For development, you can right click on node_modules/electron/dist/electron.exe and 'pin to start' and notifications will work.
+app.setAppUserModelId(process.execPath)
+
 app.whenReady().then(() => {
     createWindow()
     app.on('activate', function () {
