@@ -45,6 +45,14 @@
     background: var(--sc-accent);
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: var(--sc-background-highlight) !important;
+}
+
+.loading-animation {
+    background-color:var(--sc-background-primary) !important;
+}
+
 /* Font Family */
 
 .global-font-family {
@@ -58,6 +66,7 @@
 .attachment .attachment-title {
     font-size: 10pt !important;
 }
+
 
 
 /* Background Colours */
