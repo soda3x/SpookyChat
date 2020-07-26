@@ -30,10 +30,27 @@
     --status-away: var(--sc-alert) !important;
     --status-busy: var(--sc-error) !important;
     --status-invisible-sidebar: var(--sc-background-primary) !important;
+    --sidebar-item-unread-color: var(--sc-accent) !important;
+    --sidebar-item-text-color: var(--sc-text-primary) !important;
+    --rcx-text-colors-info: var(--sc-text-primary) !important;
+    --rcx-text-colors-default: var(--sc-text-primary) !important;
+    --rcx-input-colors-background-color: var(--sc-background-secondary) !important;
+    --rcx-tabs-selected-color: var(--sc-accent) !important;
+    --rcx-tabs-selected-border-color: var(--sc-accent) !important;
+    --rcx-input-colors-border-color: var(--sc-background-highlight) !important;
+    --rcx-tabs-color: var(--sc-background-highlight) !important;
 }
 
 ::selection {
     background: var(--sc-accent);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--sc-background-highlight) !important;
+}
+
+.loading-animation {
+    background-color:var(--sc-background-primary) !important;
 }
 
 /* Font Family */
@@ -49,6 +66,7 @@
 .attachment .attachment-title {
     font-size: 10pt !important;
 }
+
 
 
 /* Background Colours */
@@ -114,7 +132,8 @@ textarea[disabled],
 
 .sidebar-item:hover,
 .rc-button,
-.rc-message-box__container.editing {
+.rc-message-box__container.editing,
+.rcx-table__row:hover {
     background-color: var(--sc-background-highlight) !important;
 }
 
@@ -122,7 +141,8 @@ textarea[disabled],
 .popup-item.selected,
 .first-unread .body:before,
 .rcx-toggle-switch__input:checked+.rcx-toggle-switch__fake,
-.rcx-radio-button__input:checked+.rcx-radio-button__fake {
+.rcx-radio-button__input:checked+.rcx-radio-button__fake,
+.actionLinks li .action-link {
     background-color: var(--sc-accent) !important;
 }
 
@@ -162,7 +182,6 @@ textarea[disabled],
 .rc-user-info-details__info,
 .rc-modal__title,
 .rc-message-box__toolbar-formatting-icon,
-.sidebar-item__ellipsis,
 .rooms-list__type,
 .attachments__name,
 .attachments-menu,
@@ -197,13 +216,13 @@ textarea {
 
 .mention-link--user,
 .rc-message-box__typing-user,
-.rc-form-legend,
-.sidebar-item--unread {
+.rc-form-legend {
     color: var(--sc-text-highlight) !important;
 }
 
 .rc-popover__list,
-.rcx-box--text-style-micro {
+.rcx-box--text-style-micro,
+.actionLinks li .action-link {
     color: var(--sc-background-primary) !important;
 }
 
@@ -230,4 +249,12 @@ textarea {
 .rcx-radio-button__input:checked+.rcx-radio-button__fake,
 .rcx-radio-button__input+.rcx-radio-button__fake {
     border-color: var(--sc-accent) !important;
+}
+
+.rcx-table__head:after {
+    border-bottom: .125 rem solid var(--sc-accent) !important;
+}
+
+.rc-message-box__toolbar-formatting-link {
+    display: none; /* Hide KaTeX link */
 }
