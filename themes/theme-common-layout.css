@@ -64,3 +64,7 @@
 .mention-link--user {
     padding: 0px !important;
 }
+
+.rc-message-box__toolbar-formatting-link {
+    display: none !important; /* Hide KaTeX link */
+}

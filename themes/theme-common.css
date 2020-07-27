@@ -39,6 +39,7 @@
     --rcx-tabs-selected-border-color: var(--sc-accent) !important;
     --rcx-input-colors-border-color: var(--sc-background-highlight) !important;
     --rcx-tabs-color: var(--sc-background-highlight) !important;
+    --input-icon-color: var(--sc-text-primary) !important;
 }
 
 ::selection {
@@ -156,6 +157,7 @@ textarea[disabled],
 .message .reactions>li.selected,
 .attachment .attachment-title,
 .sidebar-item__icon,
+.sidebar-item:hover,
 .first-unread .body:after,
 .message.new-day::before,
 .flex-tab .message.new-day::before,
@@ -186,11 +188,12 @@ textarea[disabled],
 .attachments__name,
 .attachments-menu,
 .color-primary-font-color,
-.sidebar-light,
+.sidebar-light .sidebar-item,
 .message a i,
 .flex-tab a i,
 .message a[class^="icon-"],
 .flex-tab a[class^="icon-"],
+.color-info-font-color,
 input,
 select,
 textarea {
@@ -231,13 +234,14 @@ textarea {
 .rc-input__element,
 .rc-message-box__container,
 .rc-button:not(.rc-button--primary),
-.message .reactions>li,
-.message .reactions>li.selected,
 .rcx-toggle-switch__input+.rcx-toggle-switch__fake {
     border-color: var(--sc-background-highlight) !important;
 }
 
-.rc-old .code-colors {
+.rc-old .code-colors,
+.message .reactions>li,
+.message .reactions>li.selected,
+.border-secondary-background-color {
     border-color: var(--sc-background-secondary) !important;
 }
 
@@ -247,7 +251,9 @@ textarea {
 .message.new-day::after,
 .rcx-toggle-switch__input:checked+.rcx-toggle-switch__fake,
 .rcx-radio-button__input:checked+.rcx-radio-button__fake,
-.rcx-radio-button__input+.rcx-radio-button__fake {
+.rcx-radio-button__input+.rcx-radio-button__fake,
+.message .reactions>li:hover,
+.filter-item.active {
     border-color: var(--sc-accent) !important;
 }
 
@@ -255,6 +261,10 @@ textarea {
     border-bottom: .125 rem solid var(--sc-accent) !important;
 }
 
-.rc-message-box__toolbar-formatting-link {
-    display: none; /* Hide KaTeX link */
+.rc-header--room {
+    box-shadow: none !important;
+}
+
+.rc-message-box__textarea {
+    caret-color: var(--sc-accent) !important;
 }
