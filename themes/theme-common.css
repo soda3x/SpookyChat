@@ -15,6 +15,7 @@
     --button-disabled-background: var(--sc-background-secondary);
     --button-disabled-text-color: var(--sc-text-secondary);
     --button-secondary-background: var(--sc-background-highlight);
+    --button-cancel-color: var(--sc-error) !important;
     --header-background-color: var(--sc-background-primary);
     --header-title-username-color-darker: var(--sc-text-highlight);
     --input-border-color: var(--sc-background-highlight);
@@ -39,6 +40,7 @@
     --rcx-tabs-selected-border-color: var(--sc-accent) !important;
     --rcx-input-colors-border-color: var(--sc-background-highlight) !important;
     --rcx-tabs-color: var(--sc-background-highlight) !important;
+    --input-icon-color: var(--sc-text-primary) !important;
 }
 
 ::selection {
@@ -106,7 +108,6 @@ textarea[disabled],
 .role-tag,
 .rc-old .code-colors,
 .rc-old .messages-container-wrapper,
-.rc-old .messages-container .footer,
 .rc-user-info-container,
 .content-background-color,
 .contextual-bar__header {
@@ -126,6 +127,8 @@ textarea[disabled],
 .emoji-picker .emojis .emoji-list li:hover,
 .first-unread .body:after,
 .rcx-toggle-switch__input+.rcx-toggle-switch__fake,
+.contextual-bar__content,
+.contextual-bar__header,
 #rocket-chat {
     background-color: var(--sc-background-secondary) !important;
 }
@@ -156,6 +159,7 @@ textarea[disabled],
 .message .reactions>li.selected,
 .attachment .attachment-title,
 .sidebar-item__icon,
+.sidebar-item:hover,
 .first-unread .body:after,
 .message.new-day::before,
 .flex-tab .message.new-day::before,
@@ -174,6 +178,7 @@ textarea[disabled],
 .rc-old .code-colors,
 .rc-header__name,
 .rc-button:not(.rc-button--primary) .rc-input__element,
+.rc-user-info__room>.rc-button,
 .rc-member-list__counter,
 .rc-message-box__typing__user,
 .rc-switch__text,
@@ -186,18 +191,20 @@ textarea[disabled],
 .attachments__name,
 .attachments-menu,
 .color-primary-font-color,
-.sidebar-light,
+.sidebar-light .sidebar-item,
 .message a i,
 .flex-tab a i,
 .message a[class^="icon-"],
 .flex-tab a[class^="icon-"],
+.color-info-font-color,
 input,
 select,
 textarea {
     color: var(--sc-text-primary) !important;
 }
 
-.message a {
+.message a,
+.sidebar__toolbar-button:hover {
     color: var(--sc-accent) !important;
 }
 
@@ -231,13 +238,14 @@ textarea {
 .rc-input__element,
 .rc-message-box__container,
 .rc-button:not(.rc-button--primary),
-.message .reactions>li,
-.message .reactions>li.selected,
 .rcx-toggle-switch__input+.rcx-toggle-switch__fake {
     border-color: var(--sc-background-highlight) !important;
 }
 
-.rc-old .code-colors {
+.rc-old .code-colors,
+.message .reactions>li,
+.message .reactions>li.selected,
+.border-secondary-background-color {
     border-color: var(--sc-background-secondary) !important;
 }
 
@@ -247,7 +255,9 @@ textarea {
 .message.new-day::after,
 .rcx-toggle-switch__input:checked+.rcx-toggle-switch__fake,
 .rcx-radio-button__input:checked+.rcx-radio-button__fake,
-.rcx-radio-button__input+.rcx-radio-button__fake {
+.rcx-radio-button__input+.rcx-radio-button__fake,
+.message .reactions>li:hover,
+.filter-item.active {
     border-color: var(--sc-accent) !important;
 }
 
@@ -255,6 +265,40 @@ textarea {
     border-bottom: .125 rem solid var(--sc-accent) !important;
 }
 
-.rc-message-box__toolbar-formatting-link {
-    display: none; /* Hide KaTeX link */
+.rc-header--room {
+    /* box-shadow: none !important; */
+    box-shadow: 0px 2px 2px var(--sc-background-shadow) !important;
+}
+
+.rc-message-box__container {
+    box-shadow: 4px 4px 4px var(--sc-background-shadow) !important;
+    /* box-shadow: 2px 5px 5px var(--sc-background-shadow) !important; */
+}
+
+.rc-message-box__textarea {
+    caret-color: var(--sc-accent) !important;
+}
+
+.contextual-bar__header {
+    border-bottom: none !important;
+}
+
+.rc-old .messages-container .footer {
+    background-color: #FFFFFF00;
+    z-index: 99 !important;
+    
+}
+
+.messages-box {
+    position: static !important;
+}
+
+.rc-old .messages-container .wrapper {
+    padding-bottom: 80px !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.messages-box .jump-recent.not,
+.messages-box .new-message.not {
+    display: none;
 }

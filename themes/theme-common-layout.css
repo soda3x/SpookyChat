@@ -64,3 +64,9 @@
 .mention-link--user {
     padding: 0px !important;
 }
+
+.rc-message-box__toolbar-formatting-link,
+.rc-message-box__toolbar-formatting-icon,
+.rc-tooltip:after, .rc-tooltip:before {
+    display: none !important; /* Hide KaTeX link */
+}
