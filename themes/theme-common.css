@@ -310,3 +310,9 @@ textarea {
 .messages-box .new-message.not {
     display: none;
 }
+
+.rc-message-box__typing {
+    background-color: var(--sc-background-primary) !important;
+    border-radius: 2px !important;
+    padding: 2px !important;
+}
