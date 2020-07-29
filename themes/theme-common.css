@@ -41,6 +41,7 @@
     --rcx-input-colors-border-color: var(--sc-background-highlight) !important;
     --rcx-tabs-color: var(--sc-background-highlight) !important;
     --input-icon-color: var(--sc-text-primary) !important;
+    --message-box-container-border-radius: 25px !important;
 }
 
 ::selection {
@@ -159,7 +160,6 @@ textarea[disabled],
 .message .reactions>li.selected,
 .attachment .attachment-title,
 .sidebar-item__icon,
-.sidebar-item:hover,
 .first-unread .body:after,
 .message.new-day::before,
 .flex-tab .message.new-day::before,
@@ -167,6 +167,7 @@ textarea[disabled],
 .role-tag,
 .rc-header__icon--star:hover,
 .rc-header__toggle-favorite:hover,
+.rc-message-box__icon:hover,
 .rc-header__toggle-favorite--checked {
     color: var(--sc-accent) !important;
 }
@@ -204,7 +205,8 @@ textarea {
 }
 
 .message a,
-.sidebar__toolbar-button:hover {
+.sidebar__toolbar-button:hover,
+.rc-popover__item:hover {
     color: var(--sc-accent) !important;
 }
 
@@ -223,6 +225,7 @@ textarea {
 
 .mention-link--user,
 .rc-message-box__typing-user,
+.sidebar-item:hover,
 .rc-form-legend {
     color: var(--sc-text-highlight) !important;
 }
@@ -277,6 +280,7 @@ textarea {
 
 .rc-message-box__textarea {
     caret-color: var(--sc-accent) !important;
+    max-height: 60px !important;
 }
 
 .contextual-bar__header {
@@ -296,6 +300,10 @@ textarea {
 .rc-old .messages-container .wrapper {
     padding-bottom: 80px !important;
     -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.rooms-list {
+    -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
 }
 
 .messages-box .jump-recent.not,
