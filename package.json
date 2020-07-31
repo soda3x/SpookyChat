@@ -18,6 +18,7 @@
     "electron-packager": "^15.0.0"
   },
   "dependencies": {
-    "custom-electron-titlebar": "^3.2.2-hotfix62"
+    "custom-electron-titlebar": "^3.2.2-hotfix62",
+    "electron-context-menu": "^2.2.0"
   }
 }

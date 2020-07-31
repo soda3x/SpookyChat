@@ -2,6 +2,7 @@ const { app, BrowserWindow, BrowserView, nativeTheme, screen, shell } = require(
 const path = require('path')
 const fs = require("fs")
 const os = require("os")
+const contextMenu = require('electron-context-menu')
 
 // Configuration files:
 var settings;
@@ -99,8 +100,25 @@ function createWindow() {
 
     let contentView = new BrowserView({
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            spellcheck: true
         }
+    })
+
+    // Create right-click context menu
+    contextMenu({
+        window: contentView,
+        showInspectElement: false,
+        showSearchWithGoogle: false,
+        append: (defaultActions, params) => [
+            {
+                label: 'Search Google for "{selection}"',
+                visible: params.selectionText.trim().length > 0,
+                click: () => {
+                    shell.openExternal(`https://google.com/search?q=${encodeURIComponent(params.selectionText)}`)
+                }
+            }
+        ]
     })
 
     contentView.webContents.on('did-finish-load', function () {
@@ -172,9 +190,10 @@ function createWindow() {
         const height = mainWindow.getSize()[1]
         contentView.setBounds({ x: 0, y: titleBarHeight, width: width, height: height - titleBarHeight })
     });
-
     // mainWindow.webContents.openDevTools()
 }
+
+
 
 // From https://www.electronjs.org/docs/tutorial/notifications
 // The following line makes notifications work, so long as there is a start menu entry for the application process.
