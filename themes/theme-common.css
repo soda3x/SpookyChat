@@ -44,6 +44,10 @@
     --message-box-container-border-radius: 25px !important;
 }
 
+.error-color {
+    color: var(--sc-alert) !important;
+}
+
 ::selection {
     background: var(--sc-accent);
 }
@@ -275,7 +279,10 @@ textarea {
 
 .rc-message-box__container {
     box-shadow: 4px 4px 4px var(--sc-background-shadow) !important;
-    /* box-shadow: 2px 5px 5px var(--sc-background-shadow) !important; */
+}
+
+.rc-message-box__container:hover {
+    box-shadow: 6px 6px 6px var(--sc-background-shadow) !important;
 }
 
 .rc-message-box__textarea {

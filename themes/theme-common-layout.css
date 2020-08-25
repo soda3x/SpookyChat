@@ -69,4 +69,5 @@
 .rc-message-box__toolbar-formatting-icon,
 .rc-tooltip:after, .rc-tooltip:before {
     display: none !important; /* Hide KaTeX link */
+    pointer-events: none !important; 
 }
