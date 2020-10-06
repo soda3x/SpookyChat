@@ -71,3 +71,9 @@
     display: none !important; /* Hide KaTeX link */
     pointer-events: none !important; 
 }
+
+.emojione.big { 
+    /* Make it so if a message only contains emoji's, they aren't enormous */
+    width: inherit !important;
+    height: inherit !important;
+}
