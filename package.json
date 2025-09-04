@@ -14,7 +14,7 @@
   "author": "bnewman",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^28.3.2",
+    "electron": "^35.7.5",
     "electron-packager": "^15.0.0"
   },
   "dependencies": {
